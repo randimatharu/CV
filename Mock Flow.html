@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <title>Mock Flow</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    .header {
+      text-align: center;
+      padding: 32px;
+      background-color: black;
+      color: white;
+    }
+
+    .row {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+      -ms-flex: 25%; /* IE10 */
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+    .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+  </style>
+<body>
+
+<!-- Header -->
+<div class="container-fluid">
+  <div class="header">
+    <h1>Mock Flow</h1>
+    <p>Resize the browser window to see the responsive effect.</p>
+  </div>
+
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'UI/UX')" id="defaultOpen">UI/UX</button>
+    <!-- <button class="tablinks" onclick="openCity(event, 'Logo')">Logo</button>
+    <button class="tablinks" onclick="openCity(event, 'Post')">Post</button>
+    <button class="tablinks" onclick="openCity(event, 'UI/UX')">UI/UX</button> -->
+    <!-- <button class="tablinks" onclick="openCity(event, 'Frock')">Frock</button>
+    <button class="tablinks" onclick="openCity(event, 'Background Removing')">Background Removing</button>
+    <button class="tablinks" onclick="openCity(event, 'Logo')">Logo</button> -->
+  </div>
+  
+  <div id="UI/UX" class="tabcontent">
+    <div class="row"> 
+      <div class="column">
+        <img src="mockflow/Choco Club web.png" style="width:100%">
+        <!-- <img src="AI/Salon business card-01.jpg" style="width:100%">
+        <img src="AI/Scl Shirt-01.jpg" style="width:100%"> -->
+      </div>
+
+      <div class="column">
+        <img src="mockflow/Chat app.png" style="width:100%">
+        <!-- <img src="AI/School business card 2-02.jpg" style="width:100%">
+        <img src="AI/School business card 2-01.jpg" style="width:100%"> -->
+      </div>
+
+      <div class="column">
+        <img src="mockflow/Music app.png" style="width:100%">
+        <!-- <img src="AI/Letter Head SCL-01.jpg" style="width:100%"> -->
+      </div>
+
+      <!-- <div class="column">
+        <img src="AI/Letter Head SCL2-01.jpg" style="width:100%">
+        <img src="AI/School business card-01.jpg" style="width:100%">
+      </div> -->
+    </div>
+  </div>
+  
+  <!-- <div id="Logo" class="tabcontent">
+    <div class="row"> 
+      <div class="column">
+        <img src="AI/Saloon Ima logo.png" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="AI/School Logo-01.jpg" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="AI/logo navi-01.png" style="width:100%">
+      </div>
+
+      <div class="column">
+      </div>
+    </div>
+  </div> -->
+  
+  <!-- <div id="Post" class="tabcontent">
+    <div class="row"> 
+      <div class="column">
+        <img src="AI/Business English post-01.jpg" style="width:100%">
+        <img src="AI/saloon-01.jpg" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="AI/english pixelma-01.jpg" style="width:100%">
+        <img src="AI/Scl Admission-01.jpg" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="AI/kanishka poster 1-01.jpg" style="width:100%">
+        <img src="AI/kanishka cricket-01.jpg" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="AI/Labor day post-01.jpg" style="width:100%">
+        <img src="AI/Scl labor day-01.jpg" style="width:100%">
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div id="UI/UX" class="tabcontent">
+    <div class="row"> 
+      <div class="column">
+        <img src="AI/Swimming web.png" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="#" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="#" style="width:100%">
+      </div>
+
+      <div class="column">
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div id="Frock" class="tabcontent">
+    <div class="row"> 
+      <div class="column">
+        <img src="#" style="width:100%">
+        <img src="#" style="width:100%">
+        <img src="Photoshop/Dress pattern 3 - Exclusion.jpg" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="Photoshop/Dress pattern 4 - Saturation.jpg" style="width:100%">
+        <img src="Photoshop/Dress pattern 5 - Vivid light.jpg" style="width:100%">
+        <img src="Photoshop/Dress pattern 6 - Hue.jpg" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="Photoshop/Dress pattern 7- soft light.jpg" style="width:100%">
+        <img src="Photoshop/Dress pattern 8- multiply.jpg" style="width:100%">
+        <img src="Photoshop/Dress pattern 9- color dodge.jpg" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="Photoshop/Dress pattern 10- pin light.jpg" style="width:100%">
+        <img src="Photoshop/Dress pattern 11- darken.jpg" style="width:100%">
+        <img src="Photoshop/Dress pattern 12- leaner burn.jpg" style="width:100%">
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div id="Background Removing" class="tabcontent">
+    <div class="row"> 
+      <div class="column">
+        <img src="Photoshop/background removing.png" style="width:100%">
+      </div>
+
+      <div class="column">
+      </div>
+
+      <div class="column">
+      </div>
+
+      <div class="column">
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div id="Logo" class="tabcontent">
+    <div class="row"> 
+      <div class="column">
+        <img src="Photoshop/TechSwords Logo.png" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="Photoshop/Pixelma.png" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="Photoshop/KAVEE13 LOGO 2.jpg" style="width:100%">
+      </div>
+
+      <div class="column">
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+</body>
+</html>
